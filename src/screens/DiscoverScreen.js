@@ -1,8 +1,11 @@
 import React from 'react'
+import { View, Text } from 'react-native'
 
 function DiscoverScreen() {
   return (
-    <div>DiscoverScreen</div>
+    <View>
+      <Text>DiscoverScreen</Text>
+    </View>
   )
 }
 

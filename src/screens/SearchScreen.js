@@ -1,8 +1,11 @@
 import React from 'react'
+import { View, Text } from 'react-native'
 
 function SearchScreen() {
   return (
-    <div>SearchScreen</div>
+    <View>
+      <Text>SearchScreen</Text>
+    </View>
   )
 }
 

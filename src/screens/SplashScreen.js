@@ -1,8 +1,11 @@
 import React from 'react'
+import { View, Text } from 'react-native'
 
 function SplashScreen() {
   return (
-    <div>SplashScreen</div>
+    <View>
+      <Text>SplashScreen</Text>
+    </View>
   )
 }
 

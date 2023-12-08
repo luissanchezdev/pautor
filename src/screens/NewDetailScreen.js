@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-function WelcomeScreen() {
+function NewDetailScreen() {
   return (
     <View>
-      <Text>WelcomeScreen</Text>
+      <Text>NewDetailScreen</Text>
     </View>
   )
 }
 
-export default WelcomeScreen
+export default NewDetailScreen
