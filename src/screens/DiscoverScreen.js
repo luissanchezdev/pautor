@@ -1,11 +1,14 @@
 import React from 'react'
+import { SafeAreaView  } from 'react-native'
 import { View, Text } from 'react-native'
 
 function DiscoverScreen() {
   return (
-    <View>
-      <Text>DiscoverScreen</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <Text>DiscoverScreen</Text>
+      </View>
+    </SafeAreaView>
   )
 }
 

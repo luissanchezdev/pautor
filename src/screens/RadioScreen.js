@@ -1,11 +1,12 @@
 import React from 'react'
+import { SafeAreaView } from 'react-native'
 import { View, Text } from 'react-native'
 
 function RadioScreen() {
   return (
-    <View>
+    <SafeAreaView>
       <Text>Play</Text>  
-    </View>
+    </SafeAreaView>
   )
 }
 

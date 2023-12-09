@@ -1,5 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
+import { SafeAreaView } from 'react-native'
 import { View, Text, ImageBackground, TouchableOpacity } from 'react-native'
 import { SpaceGroteskBold } from '../fonts'
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen'

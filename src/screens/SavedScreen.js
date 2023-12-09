@@ -1,11 +1,12 @@
 import React from 'react'
+import { SafeAreaView } from 'react-native'
 import { View, Text } from 'react-native'
 
 function SavedScreen() {
   return (
-    <View>
+    <SafeAreaView>
       <Text>SavedScreen</Text>
-    </View>
+    </SafeAreaView>
   )
 }
 

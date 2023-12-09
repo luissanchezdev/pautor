@@ -1,11 +1,12 @@
 import React from 'react'
+import { SafeAreaView } from 'react-native'
 import { View, Text } from 'react-native'
 
 function NewDetailScreen() {
   return (
-    <View>
+    <SafeAreaView>
       <Text>NewDetailScreen</Text>
-    </View>
+    </SafeAreaView>
   )
 }
 
