@@ -2,8 +2,9 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { useColorScheme } from "nativewind"
-import { HomeScreen, DiscoverScreen, NewDetailScreen, SavedScreen, SearchScreen, SplashScreen, WelcomeScreen  } from "../screens"
-import { IonicIcons } from '@expo/vector-icons'
+import { HomeScreen, DiscoverScreen, NewDetailScreen, SavedScreen, SearchScreen, SplashScreen, WelcomeScreen, RadioScreen  } from "../screens"
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { widthPercentageToDP as wp } from "react-native-responsive-screen"
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -17,41 +18,40 @@ const AppNavigation = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => {
             let iconName;
-            if( route.name === 'Home') {
+            if( route.name === 'Inicio') {
               iconName = 'home'
-            } else if( route.name === 'Discover') {
-              iconName = 'compass'
-            } else if( route.name === 'Search') {
-              iconName = 'search'
-            } else if( route.name === 'Saved') {
-              iconName = 'bookmark'
+            } else if( route.name === 'Categorias') {
+              iconName = 'compass-outline'
+            } else if( route.name === 'Play'){
+              iconName = 'play-outline'
+            } else if( route.name === 'Buscar') {
+              iconName = 'search-outline'
+            } else if( route.name === 'Mis Articulos') {
+              iconName = 'bookmark-outline'
             }
 
             const customize = 25
 
             return (
-              <IonicIcons>
-                name={ iconName }
-                size={ customize }
-                color={ focused ? 'green' : 'gray' }
-              </IonicIcons>
+              <Ionicons 
+                name={ iconName } 
+                size={ wp(7)}
+                color={ focused ? '#1b8fc3' : 'gray' }
+              />               
             )
           },
-          tabBarActiveTintColor: 'green',
-          tabBarInactiveTintColor: 'gray',
-          tabBarLabelStyle: {
-            fontSize: 12,
-            fontFamily: 'SpaceGroteskMedium'
+          tabBarStyle: {
+            backgroundColor: colorScheme === 'dark' ? '#1b8fc3' : '#191b1e',
+            borderTopWidth: 0,
+            elevation: 0
           },
-          tabBarLabelStyle: {
-            backgroundColor: colorScheme === 'dark' ? 'black' : 'white',
-          }
         })}
       >
-        <Tab.Screen name='Home' component={ HomeScreen } />
-        <Tab.Screen name='Discover' component={ DiscoverScreen } />
-        <Tab.Screen name='Search' component={ SearchScreen } />
-        <Tab.Screen name='Saved' component={ SavedScreen } />
+        <Tab.Screen name='Inicio' component={ HomeScreen } />
+        <Tab.Screen name='Categorias' component={ DiscoverScreen } />
+        <Tab.Screen name='Play' component={ RadioScreen } />
+        <Tab.Screen name='Buscar' component={ SearchScreen } />
+        <Tab.Screen name='Mis Articulos' component={ SavedScreen }/>
       </Tab.Navigator>
     )
   }
@@ -61,7 +61,7 @@ const AppNavigation = () => {
       <Stack.Navigator
         initialRouteName='Splash'
         screenOptions={{
-          headerShown: true
+          headerShown: false
         }}
       >
         <Stack.Screen name='Splash' component={ SplashScreen } />

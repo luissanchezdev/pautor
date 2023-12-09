@@ -5,6 +5,7 @@ import SavedScreen from "./SavedScreen";
 import SearchScreen from "./SearchScreen";
 import WelcomeScreen from  "./WelcomeScreen";
 import SplashScreen from './SplashScreen'
+import RadioScreen from "./RadioScreen";
 
 export {
   DiscoverScreen,
@@ -13,5 +14,6 @@ export {
   SavedScreen,
   SearchScreen,
   WelcomeScreen,
-  SplashScreen
+  SplashScreen,
+  RadioScreen
 }
