@@ -2,14 +2,15 @@ import React from 'react'
 import { SafeAreaView  } from 'react-native'
 import { View, Text } from 'react-native'
 
-function DiscoverScreen() {
+function CategoryScreen({ route, navigation }) {
+
   return (
     <SafeAreaView>
       <View>
-        <Text>DiscoverScreen</Text>
+        <Text>CategoryScreen</Text>
       </View>
     </SafeAreaView>
   )
 }
 
-export default DiscoverScreen
+export default CategoryScreen

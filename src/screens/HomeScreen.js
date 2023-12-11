@@ -1,8 +1,9 @@
 import React from 'react'
 import { SafeAreaView  } from 'react-native'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 
-function HomeScreen() {
+function HomeScreen({ navigation }) {
+
   return (
     <SafeAreaView>
       <View>

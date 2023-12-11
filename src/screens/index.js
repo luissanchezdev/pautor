@@ -1,4 +1,4 @@
-import DiscoverScreen from "./DiscoverScreen";
+import CategoryScreen from "./CategoryScreen";
 import HomeScreen from "./HomeScreen";
 import NewDetailScreen from "./NewDetailScreen";
 import SavedScreen from "./SavedScreen";
@@ -8,7 +8,7 @@ import SplashScreen from './SplashScreen'
 import RadioScreen from "./RadioScreen";
 
 export {
-  DiscoverScreen,
+  CategoryScreen,
   HomeScreen,
   NewDetailScreen,
   SavedScreen,

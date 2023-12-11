@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { useColorScheme } from "nativewind"
-import { HomeScreen, DiscoverScreen, NewDetailScreen, SavedScreen, SearchScreen, SplashScreen, WelcomeScreen, RadioScreen  } from "../screens"
+import { HomeScreen, CategoryScreen, NewDetailScreen, SavedScreen, SearchScreen, SplashScreen, WelcomeScreen, RadioScreen  } from "../screens"
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { widthPercentageToDP as wp } from "react-native-responsive-screen"
 
@@ -16,6 +16,9 @@ const AppNavigation = () => {
       <Tab.Navigator
         screenOptions={ ({ route }) => ({
           headerShown: false,
+          headerTitleStyle: {
+            fontFamily: 'SpaceGroteskMedium'
+          },
           tabBarIcon: ({ focused }) => {
             let iconName;
             if( route.name === 'Inicio') {
@@ -47,8 +50,11 @@ const AppNavigation = () => {
           },
         })}
       >
-        <Tab.Screen name='Inicio' component={ HomeScreen } />
-        <Tab.Screen name='Categorias' component={ DiscoverScreen } />
+        <Tab.Screen 
+          name='Inicio' 
+          component={ HomeScreen } 
+        />
+        <Tab.Screen name='Categorias' component={ CategoryScreen } />
         <Tab.Screen name='Play' component={ RadioScreen } />
         <Tab.Screen name='Buscar' component={ SearchScreen } />
         <Tab.Screen name='Mis Articulos' component={ SavedScreen }/>
@@ -76,5 +82,6 @@ const AppNavigation = () => {
     </NavigationContainer>
   )
 }
+
 
 export default AppNavigation
